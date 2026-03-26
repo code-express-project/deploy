@@ -18,6 +18,13 @@ services:
       - PORT=3002
       - SECURITY_API_URL=http://security:3001/api
 
+  front-barber:
+    image: luidigas/front-barber:latest
+    container_name: front-barber
+    restart: always
+    expose:
+      - "80"
+
   nginx:
     image: nginx:alpine
     container_name: nginx
